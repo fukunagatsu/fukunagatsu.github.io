@@ -8,4 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("sidebar.html")
         .then(response => response.text())
         .then(data => document.getElementById("sidebar-container").innerHTML = data);
+
+    // ナビを読み込む
+    fetch("nav.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("nav-container").innerHTML = data);
 });
