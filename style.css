@@ -13,7 +13,7 @@ body {
 	background-color: #fff;
 }
 header {
-	height: 80px;
+	height: 40px;
 	padding: 20px 30px;
 }
 .header-inner {
@@ -24,7 +24,7 @@ h1 {
 	font-size: 24px;
 	margin: 0;
 	padding: 0;
-	background-color: #B6D7A8;
+	background-color: white;
 }
 h1 a {
 	color: #000;
@@ -37,7 +37,7 @@ h2 {
 	font-size: 22px;
 	margin: 0;
 	padding: 10px;
-	background-color: #B6D7A8;
+	background-color: #C8E6C9;
 }
 h2 a {
 	text-decoration: none;
@@ -113,10 +113,14 @@ blockquote {
 }
 nav {
   width: 90%;
-  height: 30px;
-  background-color: white;
+  margin: 0 auto; /* センター揃え */
+  height: 45px;
+  background-color: #388E3C;
   padding-top: 5px;
   box-sizing: border-box;
+  border-bottom: 3px solid #2E7D32; /* さらに濃い緑でボーダー */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* 下に軽い影 */
+  font-size: 1.3rem;
 }
 nav ul {
   display: flex;
@@ -130,7 +134,11 @@ nav a {
   display: block;
   text-decoration: none;
   color: white;
-  margin-right: 35px;
+  margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* ホバー時に下線 */
 }
 
 @media (max-width: 768px) {
