@@ -9,7 +9,7 @@ body {
 }
 #outer {
 	margin: 0 auto;
-	width: 1000px;
+	width: 100%;
 	background-color: #fff;
 }
 header {
@@ -59,7 +59,9 @@ a {
 	color: #094a94;
 }
 #content {
-	padding: 0 20px;
+	padding: 20px; /* 全体に適度な余白 */
+	max-width: 1200px; /* 必要なら最大幅を設定 */
+	margin: 0 auto; /* センター揃え */
 }
 #content::after {
 	content: "";
@@ -67,9 +69,8 @@ a {
 	clear: both;
 }
 .inner {
-	float: right;
-	width: 640px;
-	margin: 0;
+	width: 100%;
+	margin: 0 auto;
 	padding: 10px 20px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
