@@ -2,15 +2,10 @@
 body {
 	margin: 0;
 	padding: 0;
-	line-height: 1.6;
-	background: #fff;
-	background-size: 40px 40px;
-	font-family: Arial, Hiragino Sans;
-}
-#outer {
-	margin: 0 auto;
-	width: 100%;
-	background-color: #fff;
+	line-height: 1.7;
+	font-size: 16px;
+	background: #f8f8f8;
+	font-family: "Noto Sans JP", Arial, Hiragino Sans;
 }
 header {
 	height: 40px;
@@ -35,16 +30,22 @@ h1 a:hover {
 }
 h2 {
 	font-size: 22px;
-	margin: 0;
-	padding: 10px;
-	background-color: #C8E6C9;
+	margin: 0 0 15px 0;
+	padding: 0;
+	background-color: transparent;
+	border-bottom: 3px solid #2d7e31;
+	color: #333;
 }
 h2 a {
 	text-decoration: none;
 	color: #265699;
 }
+h3 {
+	margin: 0 0 0em 0em;
+}
 p {
-	margin: 1em 0;
+	margin: 0.5em 0;
+	font-size: 1rem;
 }
 .aka {
 	color: #B0231D;
@@ -59,9 +60,9 @@ a {
 	color: #094a94;
 }
 #content {
-	padding: 20px; /* 全体に適度な余白 */
-	max-width: 1200px; /* 必要なら最大幅を設定 */
-	margin: 0 auto; /* センター揃え */
+	padding: 20px; 
+	max-width: 1200px; 
+	margin: 0 auto; 
 }
 #content::after {
 	content: "";
@@ -72,7 +73,9 @@ a {
 	width: 90%;
 	margin: 0 auto;
 	padding: 10px 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+	background-color: #fff; 
+	border-radius: 6px; 
 }
 .left-title {
 	padding: 10px;
@@ -113,18 +116,18 @@ blockquote {
 }
 nav {
   width: 90%;
-  margin: 0 auto; /* センター揃え */
-  height: 45px;
+  margin: 0 auto;
+  height: 40px;
   background-color: #388E3C;
   padding-top: 5px;
   box-sizing: border-box;
-  border-bottom: 3px solid #2E7D32; /* さらに濃い緑でボーダー */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* 下に軽い影 */
-  font-size: 1.3rem;
+  border-bottom: 3px solid #2E7D32;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); 
+  font-size: 1.2rem;
 }
 nav ul {
   display: flex;
-  padding: 0; /* 不要な余白を消す */
+  padding: 0; 
   margin: 0;
 }
 nav li {
@@ -135,10 +138,39 @@ nav a {
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline; /* ホバー時に下線 */
+    text-decoration: underline; 
+	color: #FFC107; /* ホバー時の文字色を変える */
+}
+
+.members-grid {
+	display: grid;
+	gap: 16px; 
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	list-style: none; 
+	margin: 0;
+	padding: 0;
+}
+  
+.member-card {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 1em;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.card-title {
+	
+	margin-bottom: 0.5em;
+	font-size: 1.0rem;
+}
+  
+.card-detail {
+	font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
