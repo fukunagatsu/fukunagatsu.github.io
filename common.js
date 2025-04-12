@@ -4,11 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => document.getElementById("header-container").innerHTML = data);
 
-    // サイドバーを読み込む
-    fetch("sidebar.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("sidebar-container").innerHTML = data);
-
     // ナビを読み込む
     fetch("nav.html")
         .then(response => response.text())
