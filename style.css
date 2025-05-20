@@ -11,14 +11,22 @@ header {
 	height: auto;
 	padding-top: 20px;    
 	padding-bottom: 10px;   
-	padding-left: 50px;    
-	padding-right: 50px;   
+	padding-left: 5vw;  
+	padding-right: 5vw;   
 	margin-bottom: 0;
+	box-sizing: border-box;
 }
 .header-inner {
 	padding: 0;
 	font-size: 12px;
 }
+
+.header-image {
+  width: 100%;      /* 横幅いっぱいに広がる */
+  max-width: 600px;    /* これ以上大きくならないよう制限 */
+  height: auto;     /* アスペクト比を維持 */
+}
+
 h1 {
 	font-size: 24px;
 	margin: 0;
@@ -75,7 +83,6 @@ a {
 }
 #content {
 	padding: 20px; 
-	max-width: auto; 
 	margin: 0 auto; 
 }
 #content::after {
@@ -158,6 +165,48 @@ nav a {
 nav a:hover {
     text-decoration: underline; 
 	color: #FFC107; /* ホバー時の文字色を変える */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+	display: none;
+    flex-direction: column;  /* 縦並びにする */
+    align-items: flex-start; /* 左寄せ */
+    padding-left: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav a {
+    margin-left: 0;           /* 左マージンを削除 */
+    padding: 10px 0;          /* 縦の余白を追加 */
+    width: 100%;              /* 横幅いっぱいに */
+  }
+
+  nav {
+    height: auto;             /* 高さを自動にして項目に合わせる */
+	margin-bottom: 16px;  /* ← スマホのときだけ隙間を作る */
+  }
+
+  #content {
+    padding: 32px;        /* スマホでは少し余白を減らす */
+    max-width: 90%;      /* 幅を制限しないが、paddingで読みやすさを確保 */
+  }
 }
 
 .members-grid {
